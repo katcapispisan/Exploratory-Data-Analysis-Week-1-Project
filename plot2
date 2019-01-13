@@ -1,5 +1,4 @@
-plot2 <- function(){
-        
+   
         powerdata <- read.table("./household_power_consumption.txt", stringsAsFactors = FALSE, header = TRUE, sep =";"  )
         
         FullTimeDate <- strptime(paste(powerdata$Date, powerdata$Time, sep=" "), "%d/%m/%Y %H:%M:%S")
@@ -19,4 +18,4 @@ plot2 <- function(){
         
         png("plot2.png", width=480, height=480)
         with(subsetdata, plot(FullTimeDate, Global_active_power, type="l", xlab="Day", ylab="Global Active Power (kilowatts)"))
-    }
+    
