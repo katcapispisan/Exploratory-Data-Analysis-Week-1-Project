@@ -12,7 +12,7 @@ plot1 <- function(){
         powerdata$Sub_metering_2 <- as.numeric(powerdata$Sub_metering_2)
         powerdata$Sub_metering_3 <- as.numeric(powerdata$Sub_metering_3)
         
-        subsetdata <- subset(power,power$Date=="1/2/2007" | power$Date =="2/2/2007")
+        subsetdata <- subset(powerdata,powerdata$Date=="1/2/2007" | powerdata$Date =="2/2/2007")
         
         png("plot1.png", width=480, height=480)
         hist(subsetdata$Global_active_power, col="red", border="black", main ="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency")
