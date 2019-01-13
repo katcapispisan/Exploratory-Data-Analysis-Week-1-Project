@@ -1,4 +1,4 @@
-setwd('C:/Users/catherine/Downloads/exdata_data_household_power_consumption');
+setwd('C:/Users/catherine/Downloads/household_power_consumption');
 
 powerdata <- read.table("./household_power_consumption.txt", stringsAsFactors = FALSE, header = TRUE, sep =";"  )
         
