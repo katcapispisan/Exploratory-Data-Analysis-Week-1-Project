@@ -1,8 +1,7 @@
-setwd("C:/Users/catherine/Desktop/Downloads/Exploratory data analysis Coursera")
-C:\Users\catherine\Downloads
-data_full <- read.csv("household_power_consumption.txt", header=T, sep=';', na.strings="?", 
-                      nrows=2075259, check.names=F, stringsAsFactors=F, comment.char="", quote='\"')
-data1 <- subset(data_full, Date %in% c("1/2/2007","2/2/2007"))
-data1$Date <- as.Date(data1$Date, format="%d/%m/%Y")
-hist(data1$Global_active_power, main="Global Active Power", 
-     xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
+setwd('C:/Users/catherine/Downloads/exdata_data_household_power_consumption');
+
+power <- read.table("./household_power_consumption.txt", stringsAsFactors = FALSE, header = TRUE, sep =";"  )
+
+powerdata <- subset(power, Date %in% c("1/2/2007","2/2/2007"))
+powerdata$Date <- as.Date(data1$Date, format="%d/%m/%Y")
+hist(powerdata$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
